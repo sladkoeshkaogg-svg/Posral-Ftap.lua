@@ -5,6 +5,7 @@ end
 local repo = "https://raw.githubusercontent.com/deividcomsono/Obsidian/main/"
 loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 local Library = loadstring(game:HttpGet(repo .. "Library.lua"))()
+Library.ForceCheckbox = true
 local SaveManager = loadstring(game:HttpGet(repo .. "addons/SaveManager.lua"))()
 local ThemeManager = loadstring(game:HttpGet(repo .. "addons/ThemeManager.lua"))()
 local Options = Library.Options
@@ -201,19 +202,19 @@ rs.GrabEvents.ExtendGrabLine.OnClientEvent:Connect(function(...)
 end)
 
 local Window = Library:CreateWindow({
-    Title = "Posral",
-    Footer = "version: Иди нахуй не читай",
+    Title = "a:sob",
+    Footer = "No Footer",
     NotifySide = "Right",
 })
 
 local Tabs = {
-	Main = Window:AddTab("Main"),
-    Defence = Window:AddTab("Defence"),
-    Visual = Window:AddTab("Visual"),
-    Target = Window:AddTab("Target"),
-    Server = Window:AddTab("Server"),
-    Keybinds = Window:AddTab("Keybinds"),
-    Whitelist = Window:AddTab("Whitelist"),
+	Main = Window:AddTab("Main","house"),
+    LocalPlayer = Window:AddTab("Local Player","user"),
+    Visual = Window:AddTab("Visual","eye"),
+    Target = Window:AddTab("Target","crosshair"),
+    Server = Window:AddTab("Server","server"),
+    Keybinds = Window:AddTab("Keybinds","keyboard"),
+    Whitelist = Window:AddTab("Whitelist","book-open"),
 	["UI Settings"] = Window:AddTab("UI Settings"),
 }
 do
